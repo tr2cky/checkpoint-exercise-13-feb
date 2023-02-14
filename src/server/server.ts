@@ -5,6 +5,7 @@ import {
   getAll,
   updateById,
   create,
+  getOneById,
 } from "./controllers/controller.js";
 
 
@@ -18,6 +19,8 @@ app.listen(3001, () => {
 });
 
 app.get("/api/posts", getAll);
+
+app.get("/api/posts/:id", getOneById);
 
 app.post("/api/posts", create);
 
